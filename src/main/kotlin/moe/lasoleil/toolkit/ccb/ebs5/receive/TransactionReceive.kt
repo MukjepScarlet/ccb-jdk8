@@ -35,6 +35,7 @@ class TransactionReceive internal constructor(
     val language: String get() = params["LANGUAGE"] as String
 
     @get:JvmName("info")
+    @Suppress("UNCHECKED_CAST")
     val info: Map<String, Any> get() = params["TX_INFO"] as Map<String, Any>
 
     companion object {
